@@ -34,7 +34,7 @@ typedef struct
 } tree;
 /**
  * print_tree - prints a data structure
- *J, @x: first argument
+ * @x: first argument
  * @y: second argument
  */
 void print_tree(tree x, tree y)
