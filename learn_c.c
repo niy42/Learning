@@ -20,7 +20,8 @@ char *_strcpy(char *dest, char *src)
 	while (*src)
 	{
 		*return_dest = *src;
-		return_dest++; src++;
+		return_dest++; 
+		src++;
 	}
 	return_dest = '\0';
 	return(return_dest);
