@@ -35,12 +35,12 @@ bool palin(char *s)
 	j = 0;
 	do {
 		if (*start != *end)
-			return false;
+			return true;
 		start++;
 		end--;
 		j++;
 	} while (j <= i/2);
-	return (true);
+	return (false);
 }
 int main(void)
 {
@@ -52,8 +52,8 @@ int main(void)
 	scanf("%s", arr);
 
 	if (palin(arr))
-		printf("%s is a palindrome\n", arr);
-	else
 		printf("%s is not a palindrome\n", arr);
+	else
+		printf("%s is a palindrome\n", arr);
 	return (0);
 }
