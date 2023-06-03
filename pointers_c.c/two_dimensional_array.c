@@ -20,6 +20,7 @@ int main(void)
 		}
 		++i;
 	}
+	printf("The Matrix of arr[%d][%d] is: ", i, j);
 	i = 0;
 	for (; i < row; ++i)
 	{
