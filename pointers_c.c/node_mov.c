@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * 
+ * main - del node two and insert forty five after node four
+ * Return: Always zero
  */
  typedef struct node
  {
@@ -9,6 +10,7 @@
      struct node *next;
  } node;
  void delNode(node **, int);
+ void addAfter(node *, int, int x);
  void add(node **root, int value)
  {
      node *tmp;
@@ -50,9 +52,28 @@
             add(&root, i);
             ++i;
      } while (i < 8);
-     delNode(&root, 2);
+     delNode(&root, 0);
+     addAfter(root, 45, 4);
      printNode(root);
      return (0);
+ }
+ void addAfter(node *root, int val, int x)
+ {
+	 node *tmp;
+	 tmp = root;
+
+	 while (tmp->next && tmp->data != x)
+	 {
+		 tmp = tmp->next;
+	 }
+	 if (tmp->next != NULL)
+	 {
+		node *p;
+	 	p = malloc(sizeof(node));
+	 	p->data = val;
+	 	p->next = tmp->next;
+	 	tmp->next = p;
+	 }
  }
  void delNode(node **root, int x)
  {
@@ -63,10 +84,6 @@
      {
          prev = tmp;
          tmp = tmp->next;
-     }
-     if (tmp->next == NULL && tmp->data != x)
-     {
-         return;
      }
      /*delete the head of the node*/
      if (prev == NULL)
