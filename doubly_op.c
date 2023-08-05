@@ -69,7 +69,7 @@
      }
      if (tmp == NULL)
      {
-         printf("Node with %d is not found\n");
+         printf("Node with %d is not found\n", x);
          return;
      }
      new_node->data = val;
