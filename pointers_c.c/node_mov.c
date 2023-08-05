@@ -1,4 +1,4 @@
-#include <stdio.h>
+I#include <stdio.h>
 #include <stdlib.h>
 /**
  * main - del node two and insert forty five after node four
@@ -52,7 +52,8 @@
             add(&root, i);
             ++i;
      } while (i < 8);
-     delNode(&root, 0);
+
+     /*delNode(&root, 0);*/
      addAfter(root, 45, 4);
      printNode(root);
      return (0);
@@ -66,7 +67,7 @@
 	 {
 		 tmp = tmp->next;
 	 }
-	 if (tmp->next != NULL)
+	 if (tmp)
 	 {
 		node *p;
 	 	p = malloc(sizeof(node));

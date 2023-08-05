@@ -19,27 +19,26 @@ int _strlen(char *s)
 }
 bool palin(char *s)
 {
-	int i, j;
+	int i, j, len;
 	char *start, *end;
 
 	start = s;
 	end = s;
-	i = _strlen(s);
-	i--;
+	len = _strlen(s);
+	len--;
 	j = 0;
-	for (; j < i;)
+	for (; j < len;)
 	{
 		end++;
 		j++;
 	}
-	j = 0;
+	i = 0;
 	do {
-		if (*start != *end)
+		if ( start[i] != *end)
 			return true;
-		start++;
 		end--;
-		j++;
-	} while (j <= i/2);
+		i++;
+	} while (i <= len/2);
 	return (false);
 }
 int main(void)
@@ -52,8 +51,8 @@ int main(void)
 	scanf("%s", arr);
 
 	if (palin(arr))
-		printf("%s is not a palindrome\n", arr);
-	else
-		printf("%s is a palindrome\n", arr);
+		printf("%s is not a palindrome\n", arr); /* if by default TRUE*/
+	else						/* else*/
+		printf("%s is a palindrome\n", arr); /*by default FALSE*/
 	return (0);
 }
