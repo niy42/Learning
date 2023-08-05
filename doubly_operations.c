@@ -46,7 +46,7 @@
      if (tmp == NULL)
      {
          printf("Node with value %d not found\n", x);
-         exit(1);
+         return;
      }
      new_node->data = val;
      new_node->next = tmp->next;
@@ -68,8 +68,8 @@
      }
      if (tmp == NULL)
      {
-         printf("Node with value %d is not found\n");
-         exit(1);
+         printf("Node with value %d is not found\n", x);
+         return;
      }
      new_node->data = val;
      if (tmp->prev)
