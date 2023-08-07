@@ -25,7 +25,7 @@
  {
      stnode = NULL;
      ennode = NULL;
-     
+       
      int a, n, insPlc;
      
      printf("Enter number of nodes (3 or more): ");

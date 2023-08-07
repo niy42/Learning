@@ -80,7 +80,7 @@ void rev4(char *s)
 		start++;
 		end--;
 		j++;
-	} while (j < i);
+	} while (j <= i/2);
 }
 
 int main(void)
