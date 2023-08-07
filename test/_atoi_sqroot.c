@@ -44,7 +44,7 @@
      }
      else
      {
-         return _sqr_recursion(num, 0, num);
+         return _sqr_recursive(num, 0, num);
      }
  }
  /**
@@ -94,7 +94,7 @@
      
      printf("Enter a number: ");
      scanf("%d", &star);
-     res = _sqr_recursive(star);
+     res = _sqr_recursion(star);
      if (res != -1)/*if res not (-1), execute the code inside*/
      {
          printf("The square root of %d is %d\n", star, res);
