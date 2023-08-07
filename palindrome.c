@@ -12,7 +12,7 @@ int _strlen(char *s)
 	do {
 		i++;
 		index += 1;
-	} while (s[index] != '\0');
+	} while (s[index]);
 	return (index);
 }
 void palin(char *s)
@@ -22,10 +22,9 @@ void palin(char *s)
 	i = _strlen(s);
 	j = 0;
 	do {
-		if (s[j] != s[i - j - 1])
-			flag = 1;
+		(s[j] != s[i - j - 1]) ? flag = 1 : 0;
 		j++;
-	} while (j < i/2);
+	} while (j <= i/2);
 	if (flag)
 		printf("%s is not a palindrome", s);
 	else
@@ -38,7 +37,7 @@ int main(void)
 	char s[i];
 
 	printf("Enter string: ");
-	scanf("%s", s);
+	scanf("%s", &s);
 	palin(s);
 	return (0);
 }
